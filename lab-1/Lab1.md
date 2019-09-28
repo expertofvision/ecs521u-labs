@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. Download the `index.html` file
+1. Download the [`index.html`](https://raw.githubusercontent.com/mariancross/ecs521u-labs/fc50b97cbf43e7a75029dd00531075d597e5d7bb/lab-1/index.html) file
 2. Open the file in Firefox and gedit
 3. Explore the developer tools, and console (Ctrl-Shift-K) in Firefox
 
@@ -26,4 +26,4 @@
 3. Go to the browser and press the right arrow key. Check the console to see the correct key code
 4. Do the same for the left arrow key
 5. Replace the key codes in the move function
-6. Try to move your sick figure by using the right and left arrow keys.. <font color='red'>**Note:**</font> if you don't notice any difference, remember to save the changes and refresh your browser)
+6. Try to move your sick figure by using the right and left arrow keys. <font color='red'>**Note:**</font> if you don't notice any difference, remember to save the changes and refresh your browser)
