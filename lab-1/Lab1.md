@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. Download the [`index.html`](https://raw.githubusercontent.com/mariancross/ecs521u-labs/fc50b97cbf43e7a75029dd00531075d597e5d7bb/lab-1/index.html) file
+1. Download the [`index.html`](https://raw.githubusercontent.com/mariancross/ecs521u-labs/master/lab-1/index.html) file
 2. Open the file in Firefox and gedit
 3. Explore the developer tools, and console (Ctrl-Shift-K) in Firefox
 
