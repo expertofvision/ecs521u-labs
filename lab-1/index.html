@@ -3,6 +3,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>ECS521U - Lab 1</title>
+  <style>
+    #canvas {
+      border: 1px solid #d3d3d3;
+    }
+  </style>
 </head>
 <body>
   <h1>SVG and JavaScript</h1>
@@ -43,5 +48,43 @@
 
     window.addEventListener("keydown", move, false);
   </script>
+
+  <h1>Canvas and JavaScript</h1>
+
+  <canvas id="canvas" width="400" height="400">
+    This text is displayed if your browser does not support HTML5 Canvas.
+  </canvas>
+
+  <script type="text/javascript">
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    class Ball {
+      constructor() {
+        this.x = 100;
+        this.y = 100;
+        this.vx = 5;
+        this.vy = 2;
+        this.radius = 25;
+        this.colour = 'blue';
+      }
+
+      draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+        ctx.closePath();
+        ctx.fillStyle = this.colour;
+        ctx.fill();
+      }
+    }
+
+    ball = new Ball();
+
+    // Replace the next line with the function drawBall()
+    ball.draw();
+
+  </script>
+
 </body>
 </html>
