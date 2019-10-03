@@ -1,11 +1,10 @@
 <div align="center">
   <img src="https://www.qmul.ac.uk/blizard/media/blizard/images/logos/QMUL_White.png" />
+
+# School of Electronic Engineering and Computer  Science
+
+## ECS521U - INTERACTIVE MEDIA DESIGN AND PRODUCTION</br>Lab 1
 </div>
-
-# <center>School of Electronic Engineering and Computer  Science</center>
-
-## <center>ECS521U - INTERACTIVE MEDIA DESIGN AND PRODUCTION</center>
-## <center>Lab 1</center>
 
 ### Introduction
 This lab includes basis of SVG, Canvas, interaction and animations.
