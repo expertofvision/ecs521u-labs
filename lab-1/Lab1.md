@@ -27,12 +27,12 @@ Create a SVG
 Interactivity # 1
 
 1. Examine the JavaScript code below your SVG. It connects two functions to mouse-events, in relation to an SVG object called `stick_figure`
-2. Edit/Add the id attribute of your SVG, so that it reads `id="stick_figure"`
+2. Add the id attribute to `<svg`> tag, so that it reads `id="stick_figure"`
 3. Try moving the mouse over your drawing and see what happens. <font color='red'>**Note:**</font> if you don't notice any difference, remember to save the changes and refresh your browser)
 
  Interactivity # 2
 
-4. Add the properties `x=0 y=0` inside your SVG tag
+4. Add the properties `x=0 y=0` to `<svg>`  tag
 5. Examine the listener `keydown` and the function `move`
 6. Go to the browser and press the right arrow key. Check the console to see the correct key code
 7. Do the same for the left arrow key
