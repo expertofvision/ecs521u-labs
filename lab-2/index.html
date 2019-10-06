@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ECS521U - Lab 2</title>
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        border: 0;
+        overflow: hidden; /*  Disable scrollbars */
+        display: block;  /* No floating content on sides */
+    }
+    </style>
+  </head>
+  <body>
+    <canvas id="my_canvas" width="100%" height="100%"></canvas>
+
+    <script type="text/javascript">
+      window.onload = function(){
+        var canvas = document.getElementById('my_canvas');
+        var ctx = canvas.getContext('2d');
+
+        initialize();
+
+        function initialize() {
+          // Register an event listener to call the resizeCanvas() function each time the window is resized.
+          window.addEventListener('resize', resizeCanvas, false);
+          // Draw canvas for the first time.
+          resizeCanvas();
+        }
+
+        function resizeCanvas() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          redraw();
+        }
+
+        function redraw() {
+          ctx.fillStyle = "#3ba1d4";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+        // ctx.fillStyle = 'red';
+        // ctx.fillRect(0,0,500,500);
+
+        // Drawing a cloud
+        ctx.globalAlpha = 0.5;
+
+        ctx.beginPath();
+        ctx.bezierCurveTo(130, 100, 130, 150, 230, 150);
+        ctx.bezierCurveTo(250, 180, 320, 180, 340, 150);
+        ctx.bezierCurveTo(420, 150, 420, 120, 390, 100);
+        ctx.bezierCurveTo(430, 40, 370, 30, 340, 50);
+        ctx.bezierCurveTo(320, 5, 250, 20, 250, 50);
+        ctx.bezierCurveTo(200, 5, 150, 20, 170, 80);
+        ctx.closePath();
+        ctx.fillStyle = "#ffffff";
+        ctx.fill();
+
+       // drawing another cloud
+
+      };
+  </script>
+  </body>
+</html>
