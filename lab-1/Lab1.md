@@ -57,6 +57,6 @@ drawBall();
 ```
 
 3. Note the differences
-4. Try to keep the ball moving inside the canvas. <font color='red'>**Hint:**</font> add an if condition to check `ball.vx` and `ball.vy` values
+4. Try to keep the ball moving inside the canvas. <font color='red'>**Hint:**</font> add an if condition to check `ball.x` and `ball.y` values
 5. Make the ball move only on horizontal direction
 6. Make the ball move only on vertical direction
