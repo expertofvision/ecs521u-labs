@@ -11,13 +11,13 @@ This lab is about Canvas, CSS and JavaScript
 
 ### Setup
 
-1. Open the HTML file in Firefox
-2. Open the HTML, CSS and JavaScript files in a text editor (i.e. gedit, sublime, atom, etc.)
-3. Explore the developer tools and console (Ctrl-Shift-K) in Firefox
+1. Open the HTML file in Firefox.
+2. Open the HTML, CSS and JavaScript files in a text editor (i.e. gedit, sublime, atom, etc.).
+3. Explore the developer tools and console (Ctrl-Shift-K) in Firefox.
 
 ### Adapt canvas to windows size
 
-1. Notice there is a space between the beginning of the web page and where the canvas is displayed
+1. Notice there is a space between the beginning of the web page and where the canvas is displayed.
 
 2. Eliminate this space by adding the following rule to `layout.css` file:
 
@@ -86,7 +86,7 @@ fg_canvas.setAttribute('height', height);
 
 1. Go to the definition of `drawForeground` function.
 
-2. Add an albatross image `drawForeground`
+2. Add an albatross image:
 
 ```
 albatross_img = new Image();
@@ -129,4 +129,3 @@ drawCloudFromXML('cloud.xml');
 5. Check how the XML file is being parsed and how the different node values are being used to create a new cloud using bezier curves.
 
 6. Modify the shape, colour or starting point of the cloud in `cloud.xml`.
-7.
