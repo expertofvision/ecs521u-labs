@@ -60,9 +60,14 @@ function drawCloudFromXML(filename) {
 
     for (let i = 0; i < clouds.length; i++) {
       let cloud = clouds[i];
-      let controlPoints = cloud.getElementsByTagName('control_point');
 
+      let startX = parseInt(cloud.getElementsByTagName('x')[0].childNodes[0].nodeValue);
+      let startY = parseInt(cloud.getElementsByTagName('y')[0].childNodes[0].nodeValue);
+
+      fg_ctx.moveTo(startX, startY);
       fg_ctx.beginPath();
+
+      let controlPoints = cloud.getElementsByTagName('control_point');
 
       for (let j = 0; j < controlPoints.length; j++) {
         let ctrlPoint = controlPoints[j];
@@ -76,7 +81,7 @@ function drawCloudFromXML(filename) {
         let lastX = parseInt(ctrlPoint.getElementsByTagName('x3')[0].childNodes[0].nodeValue);
         let lastY = parseInt(ctrlPoint.getElementsByTagName('y3')[0].childNodes[0].nodeValue);
 
-        fg_ctx.bezierCurveTo(firstX, firstY, secondX, secondY, lastX, lastY);
+        fg_ctx.bezierCurveTo(startX + firstX, startY + firstY, startX + secondX, startY + secondY, startX + lastX, startY + lastY);
       }
 
       fg_ctx.closePath();

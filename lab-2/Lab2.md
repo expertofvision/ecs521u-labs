@@ -11,10 +11,9 @@ This lab is about Canvas, CSS and JavaScript
 
 ### Setup
 
-1. Download the [`index.html`](#) and [`layout.css`](#)
-2. Open the HTML file in Firefox
-3. Open both the HTML and CSS files in a text editor (i.e. gedit, sublime, atom, etc.)
-4. Explore the developer tools and console (Ctrl-Shift-K) in Firefox
+1. Open the HTML file in Firefox
+2. Open the HTML, CSS and JavaScript files in a text editor (i.e. gedit, sublime, atom, etc.)
+3. Explore the developer tools and console (Ctrl-Shift-K) in Firefox
 
 ### Adapt canvas to windows size
 
@@ -43,39 +42,91 @@ canvas {
 }
 ```
 
-4. Scale canvas according to window size
+### Scale canvas when window is resized
+
+Here we will use the `window` property `devicePixelRatio` that "returns the ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device. This value could also be interpreted as the ratio of pixel sizes: the size of one CSS pixel to the size of one physical pixel. In simpler terms, this tells the browser how many of the screen's actual pixels should be used to draw a single CSS pixel."[\[1\]](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio)
+
+1. Add the following line at beginning `sky.js`:
 
 ```
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  redraw();
-}
+var scale = window.devicePixelRatio;
+```
+
+2. Go to the definition of `redraw` function.
+
+3. Add the following lines to get the CSS width and height of the canvas and scale it using the variable defined in the previous step.
+
+```
+let style_width = +getComputedStyle(bg_canvas).getPropertyValue("width").slice(0, -2) * scale;
+let style_height = +getComputedStyle(bg_canvas).getPropertyValue("height").slice(0, -2) * scale;
+```
+
+3. Change the calls to `drawBackground` and `drawForeground` so they read:
+
+```
+drawBackground(style_width, style_height);
+drawForeground(style_width, style_height);
+```
+
+4. Go to the definition of `drawBackground` function and set the size of the canvas at the beginning:
+
+```
+bg_canvas.setAttribute('width', width);
+bg_canvas.setAttribute('height', height);
+```
+
+5. Go to the definition of `drawForeground` function and set the size of the canvas at the beginning:
+
+```
+fg_canvas.setAttribute('width', width);
+fg_canvas.setAttribute('height', height);
 ```
 
 ### Add more objects
 
-1. Add an albatross image inside the canvas:
+1. Go to the definition of `drawForeground` function.
+
+2. Add an albatross image `drawForeground`
 
 ```
 albatross_img = new Image();
 albatross_img.src = '37586.png';
 albatross_img.onload = function(){
-  bird_ctx.drawImage(albatross_img, 800,300);
+  fg_ctx.drawImage(albatross_img, 200, 200);
 }
 ```
 
-2. Draw a couple of clouds by invoking the function `drawCloud(startX, startY, alpha)` as follows:
+3. Draw a couple of clouds by invoking the function `drawCloud(startX, startY, alpha)` as follows:
 
 ```
-drawCloud(0, 0, 0.5);
-drawCloud(500, 500, 1);
-drawCloud(1000, 800, 0.2);
+let numClouds = 10;
+for (let i = 1; i < numClouds; i++)
+{
+  drawCloud(100 * i , 50 * i + 120 , i / numClouds);
+}
 ```
 
-2. Notice the `alpha` argument sets the transparency of the cloud.
+4. Notice the `alpha` argument sets the transparency of the cloud. Also, since the albatross was drown before, it gives the impression to be behind the clouds.
 
-3. Try to create your own cloud. Take a look at the following links:
+5. Try to create your own cloud. Take a look at the following links:
 * [HTML canvas bezierCurveTo() Method](https://www.w3schools.com/tags/canvas_beziercurveto.asp)
 * [HTML5 \<canvas\> bezierCurveTo command generator](http://www.victoriakirst.com/beziertool/)
 
+### Drawing clouds from XML file
+
+1. Open the file `cloud.xml` in a text editor and check the structure of a cloud.
+
+2. Go to `drawForeground` function in `sky.js`.
+
+3. Add at the end the call:
+
+```
+drawCloudFromXML('cloud.xml');
+```
+
+4. Go to the definition of `drawCloudFromXML` function.
+
+5. Check how the XML file is being parsed and how the different node values are being used to create a new cloud using bezier curves.
+
+6. Modify the shape, colour or starting point of the cloud in `cloud.xml`.
+7.
