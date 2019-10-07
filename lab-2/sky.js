@@ -7,12 +7,10 @@ var fg_ctx = fg_canvas.getContext('2d');
 redraw();
 
 function redraw() {
-  let style_width = window.innerWidth;
-  let style_height = window.innerHeight;
-  drawBackground(style_width, style_height);
+  drawBackground(bg_canvas.width, bg_canvas.height);
 };
 
-function drawBackground(style_width, style_height) {
+function drawBackground(width, height) {
   bg_ctx.fillStyle = '#3ba1d4';
-  bg_ctx.fillRect(0, 0, bg_canvas.width, bg_canvas.height);
+  bg_ctx.fillRect(0, 0, width, height);
 }
