@@ -106,7 +106,7 @@ for (let i = 1; i < numClouds; i++)
 }
 ```
 
-4. Notice the `alpha` argument sets the transparency of the cloud. Also, since the albatross was drown before, it gives the impression to be behind the clouds.
+4. Notice the `alpha` argument sets the transparency of the cloud. Also, since the albatross was drawn before, it gives the impression to be behind the clouds.
 
 5. Try to create your own cloud. Take a look at the following links:
 * [HTML canvas bezierCurveTo() Method](https://www.w3schools.com/tags/canvas_beziercurveto.asp)
