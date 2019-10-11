@@ -3,16 +3,16 @@
 
 # School of Electronic Engineering and Computer  Science
 
-## ECS521U - INTERACTIVE MEDIA DESIGN AND PRODUCTION</br>Lab 1
+## ECS521U - INTERACTIVE MEDIA DESIGN AND PRODUCTION</br>Lab 2
 </div>
 
 ### Introduction
-This lab is about Canvas, CSS and JavaScript
+This lab is about styling a canvas and simulating depth.
 
 ### Setup
 
-1. Open the HTML file in Firefox.
-2. Open the HTML, CSS and JavaScript files in a text editor (i.e. gedit, sublime, atom, etc.).
+1. Open [index.html](index.html) file in Firefox.
+2. Open [index.html](index.html), [layout.css](layout.css) and [sky.js](sky.js) files in a text editor (i.e. gedit, sublime, atom, etc.).
 3. Explore the developer tools and console (Ctrl-Shift-K) in Firefox.
 
 ### Adapt canvas to windows size
@@ -114,7 +114,7 @@ for (let i = 1; i < numClouds; i++)
 
 ### Drawing clouds from XML file
 
-1. Open the file `cloud.xml` in a text editor and check the structure of a cloud.
+1. Open the [cloud.xml](cloud.xml) in a text editor and check the structure of a cloud.
 
 2. Go to `drawForeground` function in `sky.js`.
 
