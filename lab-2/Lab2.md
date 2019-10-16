@@ -54,7 +54,7 @@ var scale = window.devicePixelRatio;
 
 2. Go to the definition of `redraw` function.
 
-3. Add the following lines to get the CSS width and height of the canvas and scale it using the variable defined in the previous step.
+3. Add the following lines to get the CSS width and height of the canvas and scale it using the variable defined in the previous step[\[2\]](https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da).
 
 ```
 let style_width = +getComputedStyle(bg_canvas).getPropertyValue("width").slice(0, -2) * scale;
@@ -86,7 +86,7 @@ fg_canvas.setAttribute('height', height);
 
 1. Go to the definition of `drawForeground` function.
 
-2. Add an albatross image:
+2. Add an [albatross image](https://dlpng.com/png/37586):
 
 ```
 albatross_img = new Image();
