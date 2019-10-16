@@ -44,7 +44,7 @@ canvas {
 
 ### Scale canvas when window is resized
 
-Here we will use the `window` property `devicePixelRatio` that "returns the ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device. This value could also be interpreted as the ratio of pixel sizes: the size of one CSS pixel to the size of one physical pixel. In simpler terms, this tells the browser how many of the screen's actual pixels should be used to draw a single CSS pixel."[\[1\]](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio)
+Here we will use the `window` property `devicePixelRatio` that "returns the ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device. This value could also be interpreted as the ratio of pixel sizes: the size of one CSS pixel to the size of one physical pixel. In simpler terms, this tells the browser how many of the screen's actual pixels should be used to draw a single CSS pixel." [\[1\]](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio)
 
 1. Add the following line at beginning `sky.js`:
 
@@ -54,7 +54,7 @@ var scale = window.devicePixelRatio;
 
 2. Go to the definition of `redraw` function.
 
-3. Add the following lines to get the CSS width and height of the canvas and scale it using the variable defined in the previous step[\[2\]](https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da).
+3. Add the following lines to get the CSS width and height of the canvas and scale it using the variable defined in the previous step [\[2\]](https://medium.com/wdstack/fixing-html5-2d-canvas-blur-8ebe27db07da).
 
 ```
 let style_width = +getComputedStyle(bg_canvas).getPropertyValue("width").slice(0, -2) * scale;
