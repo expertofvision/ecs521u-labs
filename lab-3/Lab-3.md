@@ -89,7 +89,38 @@ var canvasContent = canvas.toDataURL();
 document.getElementById("canvasImg").src = canvasContent;
 ```
 
-### Transform a canvas
+### Transform objects on canvas
 
 1. Draw the whole red panda image by commenting the clipping and uncommenting the original draw
 
+2. Check the syntax for canvas transformations. [HTML canvas transform() Method](https://www.w3schools.com/tags/canvas_transform.asp):
+
+```
+a 	c 	e
+b 	d 	f
+0 	0 	1
+```
+
+* `a` and `d` represent horizontal and vertical scaling, respectively
+* `b` and `c` represent horizontal and vertical skewing, respectively
+* `e` and `f` represent horizontal and vertical moving, respectively
+
+<font color='red'>**Note:**</font> The `transform()` method behaves relatively to other transformations made by `rotate()`, `scale()`, `translate()`, or `transform()`. Check the APIs of these methods too.
+
+3. Rescale the image on the canvas to half its size using `transform()` method:
+
+```
+ctx.transform(0.5, 0, 0, 0.5, 0, 0);
+```
+
+4. Now rescale the image on the canvas using the `scale()` method:
+
+```
+ctx.scale(2, 2);
+```
+
+5. Rotate the image on the canvas using the `rotate()` method:
+
+```
+ctx.rotate(20 * Math.PI / 180);
+```
