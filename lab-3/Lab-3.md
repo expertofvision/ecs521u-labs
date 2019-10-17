@@ -105,7 +105,7 @@ b 	d 	f
 * `b` and `c` represent horizontal and vertical skewing, respectively
 * `e` and `f` represent horizontal and vertical moving, respectively
 
-<font color='red'>**Note:**</font> The `transform()` method behaves relatively to other transformations made by `rotate()`, `scale()`, `translate()`, or `transform()`. Check the APIs of these methods too.
+<font color='red'>**Note:**</font> The `transform()` method behaves relatively to other transformations made by `rotate()`, `scale()`, `translate()`, or `transform()`. Check the syntax of these methods too.
 
 3. Rescale the image on the canvas to half its size using `transform()` method:
 
