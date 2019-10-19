@@ -107,3 +107,16 @@ btn.onclick = function() {
 6. Close the browser and open it once again
 
 7. Note the greet message displays the name given by the user
+
+### Persistance using XML files
+
+Check for reference:
+* Lab #2
+* [XML HttpRequest](https://www.w3schools.com/xml/xml_http.asp)
+* [How to create a DOM tree](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree)
+
+1. Following the first exercise, given an input text, try to count the occurrences of each vowel independently
+
+2. Save these results into a XML file. Check
+
+3. Load the data from the XML file into your HTML and display it.
