@@ -20,14 +20,16 @@ The purpose of this lab session is basis of data persistance.
 
 Write a program to count the vowels in a text.
 
-1. Get the both the `button` and `textarea` elements:
+1. Open [process_text.js](process_text.js) file in a text editor
+
+2. Add both the `button` and `textarea` elements:
 
 ```
 let btn = document.getElementById('count_btn');
 let txt_field = document.getElementById('input_txt');
 ```
 
-2. Add a function to the `onclick` event of the button (the vowel count will be the body of the function)
+3. Go to the `onlick` event definition for the button
 
 ```
 btn.onclick = function() {
@@ -35,13 +37,13 @@ btn.onclick = function() {
 };
 ```
 
-3. Get the value typed on the text area:
+4. Add the value typed on the text area:
 
 ```
 let txt = txt_field.value;
 ```
 
-4. Create an array that contains the vowels. This will be used later to check if a character in the text is a vowel
+5. Create an array that contains the vowels. This will be used later to check if a character in the text is a vowel
 
 ```
 let vowels = ['a', 'e', 'i', 'o', 'u'];
@@ -68,3 +70,40 @@ let result = document.getElementById('display_result');
 ```
 result.innerHTML = 'Your input contains ' + count + ' vowels';
 ```
+
+### HTML5 Web Storage
+
+The rest of the lab will be focused on achieving data persistence using a web storage.
+
+"With web storage, web applications can store data locally within the user's browser" [\[1\]](https://www.w3schools.com/html/html5_webstorage.asp). The storage limit is at least 5MB. There are two properties that can be used: `localStorage` and `sessionStorage`. The difference between them is that "`localStorage` has no expiration time, whilst data stored in `sessionStorage` gets cleared when the page session ends — that is, when the page is closed" [\[2\]](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
+
+The lab will focus on using `localStorage` property.
+
+### Create a greeting message with your name
+
+1. Open [greet_user.js](greet_user.js) file in a text editor
+
+2. Go to the definition of `update_greet_message()` function
+
+3. Check if the item `name` exists in the `localStorage` and if it does, update the message to display:
+
+```
+if (localStorage.name) {
+  greetings.innerHTML = 'Hello ' + localStorage.name + '!';
+}
+```
+
+4. Go to the definition of `greet_user()` function
+
+5. Add the event `onclick` for the button. The goal is to get the name entered by the user and display the greeting message
+
+```
+btn.onclick = function() {
+  localStorage.name = name_field.value;
+  update_greet_message();
+};
+```
+
+6. Close the browser and open it once again
+
+7. Note the greet message displays the name given by the user

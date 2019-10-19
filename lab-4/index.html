@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Lab 4 - Data persistence</title>
     <style>
+      header {
+        width: 100%;
+        display: block;
+      }
+      #greetings {
+        text-align: right;
+      }
       #input_txt {
         display: block;
 
@@ -15,15 +22,31 @@
     </style>
   </head>
   <body>
-    <h1>Count Vowels</h1>
-    <p>Type a text in the text area below</p>
-    <form>
-      <textarea type="text" rows="10" cols="50" id="input_txt"></textarea>
-      <button type="button" id="count_btn">Count vowels</button>
-    </form>
-    <p id="display_result"></p>
-    <script type="text/javascript">
-      // Add your code below
-    </script>
+    <header>
+      <h3 id="greetings"></h3>
+    </header>
+
+    <div class="section">
+      <h3>Text processing</h3>
+      <p>Type a text in the text area below</p>
+      <form>
+        <textarea type="text" rows="10" cols="50" id="input_txt"></textarea>
+        <button type="button" id="count_btn">Count vowels</button>
+      </form>
+      <p id="display_result"></p>
+    </div>
+
+    <script type="text/javascript" src="process_text.js"></script>
+
+    <div class="section">
+      <h3>Set a greet message</h3>
+      <p>Type your name in the text field below</p>
+      <form>
+        <input type="text" id="name">
+        <button type="button" id="name_btn">Enter</button>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="greet_user.js"></script>
 </body>
 </html>
