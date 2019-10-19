@@ -117,6 +117,4 @@ Check for reference:
 
 1. Following the first exercise, given an input text, try to count the occurrences of each vowel independently
 
-2. Save these results into a XML file. Check
-
-3. Load the data from the XML file into your HTML and display it.
+2. Save these results into a XML file
