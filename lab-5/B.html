@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Lab 5 - Animation of canvas shapes with Konva</title>
+    <style>
+      #container {
+        position: absolute;
+        top:0px;
+        left: 0px;
+        border: 1px solid #000000;
+      }
+    </style>
+    <script src="konva.min.js"></script>
+  </head>
+  <body>
+    <!-- Taken from: https://konvajs.org/docs/events/Binding_Events.html -->
+    <div id="container"></div>
+    <script type="text/javascript">
+      function writeMessage(message) {
+        text.text(message);
+        layer.draw();
+      }
+
+      var text = new Konva.Text({
+        x: 10,
+        y: 10,
+        fontFamily: 'Calibri',
+        fontSize: 24,
+        text: '',
+        fill: 'black'
+      });
+
+      var stage = new Konva.Stage({
+        container: 'container',
+        width: 600,
+        height: 300
+      });
+
+      var layer = new Konva.Layer();
+
+      // Draw triangle code below
+
+      // Draw circle code below
+
+      layer.add(text);
+      stage.add(layer);
+    </script>
+  </body>
+</html>
